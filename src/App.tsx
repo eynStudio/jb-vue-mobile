@@ -1,5 +1,5 @@
 import { Component, Vue, Prop, Watch } from "vue-property-decorator";
-import { Button } from "./components";
+import { data } from "./common/data";
 
 @Component({
   components: {}
@@ -12,9 +12,14 @@ export class App extends Vue {
         <div>
           <div style="">
             <router-link to="/">Home</router-link> |
-            <router-link to="/test">Test</router-link> |
-            <router-link to="/button">Button</router-link> |
-            <Button />
+            {data.nav.map(x => (
+              <div>
+                {x.title}
+                {x.list.map(x2 => (
+                  <router-link to={x2.path}>{x2.title}</router-link>
+                ))}
+              </div>
+            ))}
           </div>
           <router-view />
         </div>
