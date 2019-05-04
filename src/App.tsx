@@ -30,6 +30,12 @@ export class App extends Vue {
             <router-view />
           </div>
         </div>
+        <div class="jb-doc-demo">
+          <iframe
+            ref="iframe"
+            frameborder="0"
+          />
+        </div>
       </div>
     );
   }
