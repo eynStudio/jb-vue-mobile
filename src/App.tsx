@@ -8,8 +8,16 @@ export class App extends Vue {
   render() {
     return (
       <div>
-        fdsfs
-        <Button />
+        <div>header</div>
+        <div>
+          <div style="">
+            <router-link to="/">Home</router-link> |
+            <router-link to="/test">Test</router-link> |
+            <router-link to="/button">Button</router-link> |
+            <Button />
+          </div>
+          <router-view />
+        </div>
       </div>
     );
   }
