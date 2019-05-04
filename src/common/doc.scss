@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  color: #333;
+  font-size: 16px;
+  min-width: 1100px;
+  overflow-x: auto;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  font-family: PingFang SC, "Helvetica Neue", Arial, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.jb-doc-header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  border-bottom: 1px solid #f1f4f8;
+  display: flex;
+  align-items: center;
+
+  .header-logo {
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+}
+
+.jb-doc-nav {
+  left: 0;
+  top: 60px;
+  bottom: 0;
+  z-index: 1;
+  position: fixed;
+  overflow-y: scroll;
+  padding: 25px 0 75px;
+  min-width: 240px;
+  max-width: 240px;
+  border-right: 1px solid #f1f4f8;
+
+  a {
+    margin: 0;
+    display: block;
+    color: #455a64;
+    font-size: 16px;
+    padding: 10px 20px 10px 40px;
+    line-height: 24px;
+    transition: all 0.3s;
+  }
+  a:hover {
+    color: #0079f3;
+  }
+
+  .router-link-exact-active {
+    color: #0079f3;
+  }
+
+  .jb-doc-nav-item {
+  }
+  .jb-doc-nav-title {
+    font-weight: 700;
+    padding: 10px 20px 10px 40px;
+  }
+  .jb-doc-nav-subitem {
+  }
+}
+
+.jb-doc-main {
+  overflow: hidden;
+  padding-left: 240px;
+  margin-top: 60px;
+
+  .jb-doc-content {
+    padding: 15px 40px;
+  }
+}
