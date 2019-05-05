@@ -14,6 +14,10 @@ process.env.VUE_APP_VERSION =
 
 module.exports = {
   productionSourceMap: false,
+  pages: {
+    index: "./src/main.ts",
+    demo: "./src/mobile.ts"
+  },
   configureWebpack: {
     module: {
       rules: [

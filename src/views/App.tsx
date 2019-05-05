@@ -1,6 +1,6 @@
 import { Component, Vue, Prop, Watch } from "vue-property-decorator";
-import { data } from "./common/data";
-import "./common/doc.scss";
+import { data } from "../common/data";
+import "../common/doc.scss";
 
 @Component({
   components: {}
@@ -31,10 +31,7 @@ export class App extends Vue {
           </div>
         </div>
         <div class="jb-doc-demo">
-          <iframe
-            ref="iframe"
-            frameborder="0"
-          />
+          <iframe ref="iframe" src="/demo.html" frameborder="0" />
         </div>
       </div>
     );
