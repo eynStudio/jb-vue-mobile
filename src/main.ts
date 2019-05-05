@@ -1,11 +1,11 @@
 import Vue from "vue";
 import { App } from "./views/App";
-import router from "./router";
+import { DocRouter } from "./router";
 import "./registerServiceWorker";
 
 Vue.config.productionTip = false;
 
 new Vue({
-  router,
+  router: DocRouter,
   render: h => h(App)
 }).$mount("#app");
