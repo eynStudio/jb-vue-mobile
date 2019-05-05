@@ -6,6 +6,15 @@ import "../common/doc.scss";
   components: {}
 })
 export class App extends Vue {
+  vm = {
+    demoUrl: `/demo.html`
+  };
+
+  @Watch("$route.path")
+  onRoute() {
+    this.vm.demoUrl = `/demo.html/#${this.$route.path}`;
+  }
+
   render() {
     return (
       <div class="jb-doc">
@@ -31,7 +40,7 @@ export class App extends Vue {
           </div>
         </div>
         <div class="jb-doc-demo">
-          <iframe ref="iframe" src="/demo.html" frameborder="0" />
+          <iframe ref="iframe" src={this.vm.demoUrl} frameborder="0" />
         </div>
       </div>
     );

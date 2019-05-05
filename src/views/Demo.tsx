@@ -4,6 +4,11 @@ import { Component, Vue, Prop, Watch } from "vue-property-decorator";
   components: {}
 })
 export class Demo extends Vue {
+  @Watch("$route.path")
+  onRoute() {
+    console.log("route", this.$route.path);
+  }
+
   render() {
     return (
       <div class="jb-doc">
