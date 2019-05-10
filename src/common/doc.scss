@@ -1,3 +1,5 @@
+@import './highlight.scss';
+
 body {
   margin: 0;
   color: #333;
@@ -58,6 +60,7 @@ a {
     line-height: 24px;
     transition: all 0.3s;
   }
+
   a:hover {
     color: #0079f3;
   }
@@ -66,14 +69,14 @@ a {
     color: #0079f3;
   }
 
-  .jb-doc-nav-item {
-  }
+  .jb-doc-nav-item {}
+
   .jb-doc-nav-title {
     font-weight: 700;
     padding: 10px 20px 10px 40px;
   }
-  .jb-doc-nav-subitem {
-  }
+
+  .jb-doc-nav-subitem {}
 }
 
 .jb-doc-main {
@@ -84,6 +87,46 @@ a {
 
   .jb-doc-content {
     padding: 15px 40px;
+
+    table {
+      width: 100%;
+      font-size: 13px;
+      line-height: 1.5;
+      margin-bottom: 45px;
+      background-color: #fff;
+      border-collapse: collapse;
+      color: #34495e;
+
+      th {
+        padding: 8px 10px;
+        text-align: left;
+        font-weight: 400;
+        background-color: #f1f4f8;
+      }
+
+      th:first-child {
+        padding-left: 10px;
+      }
+
+      td {
+        padding: 8px;
+        border-bottom: 1px solid #f1f4f8;
+      }
+
+      code {
+        font-size: 13px;
+        padding: 0 8px;
+        font-family: inherit;
+        word-break: keep-all;
+      }
+
+    }
+
+    section table code {
+      margin: 2px;
+      padding: 2px 7px;
+      display: inline;
+    }
   }
 }
 
