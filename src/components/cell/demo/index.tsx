@@ -6,6 +6,6 @@ import { Cell } from "../Cell";
 })
 export default class CellDemo extends Vue {
   render() {
-    return <Cell>fsdfs</Cell>;
+    return <Cell title="abc">fsdfs</Cell>;
   }
 }
